@@ -2,14 +2,6 @@
   flex: 1 0 auto;
 }
 
-button {
-  margin: 0 10px;
-
-  &.active {
-    filter: brightness(120%);
-  }
-}
-
 main {
   padding: 20px 20%;
 }
@@ -30,4 +22,28 @@ main {
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+.app-nav-accordion {
+  .mat-expansion-panel {
+    border-radius: 0px !important;
+    box-shadow: none !important;
+
+    &.mat-expansion-panel-spacing {
+      margin: 0px;
+    }
+
+    .mat-expansion-panel-body {
+      padding: 0px;
+    }
+
+    .mat-expansion-panel-header {
+      height: 40px;
+      padding: 0px 24px 0px 16px;
+    }
+
+    .mat-expansion-panel-header-title {
+      font-size: 16px;
+    }
+  }
 }
