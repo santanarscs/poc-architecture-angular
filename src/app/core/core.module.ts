@@ -5,6 +5,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+
 @NgModule({
   declarations: [MainLayoutComponent],
   imports: [
@@ -13,6 +18,10 @@ import { MatButtonModule } from '@angular/material/button';
     RouterModule,
     MatToolbarModule,
     MatButtonModule,
+    FlexLayoutModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
   ],
   exports: [MainLayoutComponent],
 })
