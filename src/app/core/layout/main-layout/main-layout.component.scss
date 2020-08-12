@@ -1,49 +1,16 @@
-.spacer {
-  flex: 1 0 auto;
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+mat-drawer {
+  width: 350px;
 }
 
-main {
-  padding: 20px 20%;
-}
-
-.sidenav-container {
+mat-drawer-container {
   height: 100%;
 }
 
-.sidenav {
-  width: 200px;
-}
-
-.sidenav .mat-toolbar {
-  background: inherit;
-}
-
-.mat-toolbar.mat-primary {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
-.app-nav-accordion {
-  .mat-expansion-panel {
-    border-radius: 0px !important;
-    box-shadow: none !important;
-
-    &.mat-expansion-panel-spacing {
-      margin: 0px;
-    }
-
-    .mat-expansion-panel-body {
-      padding: 0px;
-    }
-
-    .mat-expansion-panel-header {
-      height: 40px;
-      padding: 0px 24px 0px 16px;
-    }
-
-    .mat-expansion-panel-header-title {
-      font-size: 16px;
-    }
-  }
+mat-drawer-content {
+  padding: 20px;
 }
