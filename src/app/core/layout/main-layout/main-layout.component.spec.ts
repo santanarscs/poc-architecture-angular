@@ -3,11 +3,32 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MainLayoutComponent } from './main-layout.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatMenuModule } from '@angular/material/menu';
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-header',
+  template: '<p>Mock Header </p>',
+})
+class MockHeader {}
+@Component({
+  selector: 'app-sidebar',
+  template: '<p>Mock Sidebar </p>',
+})
+class MockSidebar {}
+
+@Component({
+  selector: 'app-footer',
+  template: '<p>Mock Footer </p>',
+})
+class MockFooter {}
+
 describe('MainLayoutComponent', () => {
   let component: MainLayoutComponent;
   let fixture: ComponentFixture<MainLayoutComponent>;
@@ -23,8 +44,10 @@ describe('MainLayoutComponent', () => {
         MatListModule,
         MatSidenavModule,
         MatToolbarModule,
+        MatExpansionModule,
+        MatMenuModule,
       ],
-      declarations: [MainLayoutComponent],
+      declarations: [MainLayoutComponent, MockHeader, MockSidebar, MockFooter],
     }).compileComponents();
   }));
 
