@@ -5,17 +5,14 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'home',
+    redirectTo: 'dashboard',
   },
   {
-    path: 'home',
+    path: 'dashboard',
     loadChildren: () =>
-      import('./features/home/home.module').then((m) => m.HomeModule),
-  },
-  {
-    path: 'admin',
-    loadChildren: () =>
-      import('./features/admin/admin.module').then((m) => m.AdminModule),
+      import('./modules/dashboard/dashboard.module').then(
+        (m) => m.DashboardModule
+      ),
   },
   {
     path: '**',
