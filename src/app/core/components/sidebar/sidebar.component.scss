@@ -13,4 +13,27 @@
       border-radius: 50%;
     }
   }
+  .app-nav-accordion {
+    .mat-expansion-panel {
+      border-radius: 0px !important;
+      box-shadow: none !important;
+
+      &.mat-expansion-panel-spacing {
+        margin: 0px;
+      }
+
+      .mat-expansion-panel-body {
+        padding: 0px;
+      }
+
+      .mat-expansion-panel-header {
+        height: 48px;
+        padding: 0px 24px 0px 16px;
+      }
+
+      .mat-expansion-panel-header-title {
+        font-size: 16px;
+      }
+    }
+  }
 }
