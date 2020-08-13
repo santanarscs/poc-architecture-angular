@@ -1,5 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { MatListModule } from '@angular/material/list';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+
 import { SidebarComponent } from './sidebar.component';
 
 describe('SidebarComponent', () => {
@@ -8,9 +12,9 @@ describe('SidebarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SidebarComponent ]
-    })
-    .compileComponents();
+      imports: [MatListModule, MatDividerModule, MatIconModule],
+      declarations: [SidebarComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
