@@ -1,0 +1,32 @@
+<app-action></app-action>
+
+<mat-table
+  class="lessons-table mat-elevation-z8"
+  [dataSource]="courses$ | async"
+>
+  <ng-container matColumnDef="seqNo">
+    <mat-header-cell *matHeaderCellDef>#</mat-header-cell>
+    <mat-cell *matCellDef="let course">{{ course.id }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+    <mat-cell class="name-cell" *matCellDef="let course">{{
+      course.name
+    }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="description">
+    <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+    <mat-cell class="description-cell" *matCellDef="let course">{{
+      course.description
+    }}</mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+  <mat-row
+    *matRowDef="let row; columns: displayedColumns"
+    (click)="onRowClicked(row)"
+  ></mat-row>
+</mat-table>
