@@ -1,0 +1,29 @@
+{
+  "courses": [
+    {
+      "id": "b2268cc8-100a-4c28-9f94-0d6bfdc427d1",
+      "name": "Course 001",
+      "description": "Magna deserunt velit aliquip labore enim officia excepteur et elit consectetur Lorem. Exercitation enim minim fugiat velit magna consectetur nulla minim ex reprehenderit. Cupidatat duis exercitation id occaecat proident magna proident veniam non. Commodo esse dolor cupidatat deserunt sint culpa."
+    },
+    {
+      "id": "4eb02f09-4981-4188-b1e3-da7ef6d2e7d2",
+      "name": "Course 002",
+      "description": "Magna deserunt velit aliquip labore enim officia excepteur et elit consectetur Lorem. Exercitation enim minim fugiat velit magna consectetur nulla minim ex reprehenderit. Cupidatat duis exercitation id occaecat proident magna proident veniam non. Commodo esse dolor cupidatat deserunt sint culpa."
+    },
+    {
+      "id": "3563cef0-cbb8-4876-beff-6e46aa240110",
+      "name": "Course 003",
+      "description": "Magna deserunt velit aliquip labore enim officia excepteur et elit consectetur Lorem. Exercitation enim minim fugiat velit magna consectetur nulla minim ex reprehenderit. Cupidatat duis exercitation id occaecat proident magna proident veniam non. Commodo esse dolor cupidatat deserunt sint culpa."
+    },
+    {
+      "id": "364867eb-1ba3-43de-b730-a8829e8beee8",
+      "name": "Course 004",
+      "description": "Magna deserunt velit aliquip labore enim officia excepteur et elit consectetur Lorem. Exercitation enim minim fugiat velit magna consectetur nulla minim ex reprehenderit. Cupidatat duis exercitation id occaecat proident magna proident veniam non. Commodo esse dolor cupidatat deserunt sint culpa."
+    },
+    {
+      "id": "35a70b1e-4cce-41fe-9b97-ee592e9d5fec",
+      "name": "Course 005",
+      "description": "Magna deserunt velit aliquip labore enim officia excepteur et elit consectetur Lorem. Exercitation enim minim fugiat velit magna consectetur nulla minim ex reprehenderit. Cupidatat duis exercitation id occaecat proident magna proident veniam non. Commodo esse dolor cupidatat deserunt sint culpa."
+    }
+  ]
+}
