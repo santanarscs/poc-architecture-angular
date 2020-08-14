@@ -1,16 +1,23 @@
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpParams } from '@angular/common/http'
 import { take } from 'rxjs/operators'
 import { Observable } from 'rxjs'
 
 interface DefaultType {
   id?: string | number
 }
+interface SearchData {
+  page: number
+  limit: number
+}
 
 export class CrudService<T> {
   constructor(protected http: HttpClient, private API_URL: string) {}
 
-  findAll(): Observable<T[]> {
-    return this.http.get<any>(this.API_URL)
+  findAll({ page, limit }: SearchData): Observable<T[]> {
+    const params = new HttpParams({
+      fromObject: { _page: String(page), _limit: String(limit) },
+    })
+    return this.http.get<T[]>(this.API_URL, { params })
   }
   find(id: number): Observable<T> {
     return this.http.get<T>(`${this.API_URL}/${id}`).pipe(take(1))
