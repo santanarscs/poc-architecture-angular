@@ -44,7 +44,7 @@
     "object-literal-key-quotes": [true, "as-needed"],
     "quotemark": [true, "single"],
     "semicolon": {
-      "options": ["always"]
+      "options": ["never"]
     },
     "space-before-function-paren": {
       "options": {
@@ -98,7 +98,8 @@
     "template-banana-in-box": true,
     "template-no-negated-async": true,
     "use-lifecycle-interface": true,
-    "use-pipe-transform-interface": true
+    "use-pipe-transform-interface": true,
+    "no-shadowed-variable": [false]
   },
   "rulesDirectory": ["codelyzer"]
 }

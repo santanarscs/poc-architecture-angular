@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "husky": {
     "hooks": {
+      "pre-commit": "pretty-quick --staged && ng lint --fix=true && yarn test && git add",
+      "pre-push": "ng build --aot true",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
@@ -59,9 +61,11 @@
     "jest": "^26.2.2",
     "jest-preset-angular": "^8.2.1",
     "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "~3.9.5",
     "webpack-bundle-analyzer": "^3.8.0"
   },

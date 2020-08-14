@@ -1,27 +1,27 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { MatDividerModule } from '@angular/material/divider';
+import { MatDividerModule } from '@angular/material/divider'
 
-import { FooterComponent } from './footer.component';
+import { FooterComponent } from './footer.component'
 
 describe('FooterComponent', () => {
-  let component: FooterComponent;
-  let fixture: ComponentFixture<FooterComponent>;
+  let component: FooterComponent
+  let fixture: ComponentFixture<FooterComponent>
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [MatDividerModule],
       declarations: [FooterComponent],
-    }).compileComponents();
-  }));
+    }).compileComponents()
+  }))
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FooterComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(FooterComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})

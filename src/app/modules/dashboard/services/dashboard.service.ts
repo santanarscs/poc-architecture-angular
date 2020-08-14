@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
 
 @Injectable({
   providedIn: 'root',
 })
 export class DashboardService {
   constructor() {}
-  bigChart() {
+  bigChart(): { name: string; data: number[] }[] {
     return [
       {
         name: 'Asia',
@@ -27,14 +27,19 @@ export class DashboardService {
         name: 'Oceania',
         data: [2, 2, 2, 6, 13, 30, 46],
       },
-    ];
+    ]
   }
 
-  cards() {
-    return [71, 78, 39, 66];
+  cards(): number[] {
+    return [71, 78, 39, 66]
   }
 
-  pieChart() {
+  pieChart(): {
+    name: string
+    y: number
+    sliced?: boolean
+    selected?: boolean
+  }[] {
     return [
       {
         name: 'Chrome',
@@ -74,6 +79,6 @@ export class DashboardService {
         name: 'Other',
         y: 2.61,
       },
-    ];
+    ]
   }
 }

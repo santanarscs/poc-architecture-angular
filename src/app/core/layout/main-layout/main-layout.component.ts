@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-main-layout',
@@ -6,12 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-layout.component.scss'],
 })
 export class MainLayoutComponent implements OnInit {
-  sideBarOpen = true;
+  sideBarOpen = true
 
   constructor() {}
 
   ngOnInit(): void {}
-  sideBarToggler(event) {
-    this.sideBarOpen = !this.sideBarOpen;
+  sideBarToggler(event: boolean): void {
+    this.sideBarOpen = !this.sideBarOpen
   }
 }

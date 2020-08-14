@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import * as Highcharts from 'highcharts';
-import HC_exporting from 'highcharts/modules/exporting';
+import { Component, OnInit, Input } from '@angular/core'
+import * as Highcharts from 'highcharts'
+import HC_exporting from 'highcharts/modules/exporting'
 
 @Component({
   selector: 'app-widget-card',
@@ -8,17 +8,17 @@ import HC_exporting from 'highcharts/modules/exporting';
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements OnInit {
-  @Input() label: string;
-  @Input() total: string;
-  @Input() percentage: string;
-  @Input() data = [];
+  @Input() label: string
+  @Input() total: string
+  @Input() percentage: string
+  @Input() data = []
 
-  Highcharts = Highcharts;
-  chartOptions = {};
+  Highcharts = Highcharts
+  chartOptions = {}
 
   constructor() {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.chartOptions = {
       chart: {
         type: 'area',
@@ -73,12 +73,12 @@ export class CardComponent implements OnInit {
           data: this.data,
         },
       ],
-    };
+    }
 
-    HC_exporting(Highcharts);
+    HC_exporting(Highcharts)
 
     setTimeout(() => {
-      window.dispatchEvent(new Event('resize'));
-    }, 300);
+      window.dispatchEvent(new Event('resize'))
+    }, 300)
   }
 }

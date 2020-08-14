@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import * as Highcharts from 'highcharts';
-import HC_exporting from 'highcharts/modules/exporting';
+import { Component, OnInit, Input } from '@angular/core'
+import * as Highcharts from 'highcharts'
+import HC_exporting from 'highcharts/modules/exporting'
 
 @Component({
   selector: 'app-widget-pie',
@@ -8,14 +8,14 @@ import HC_exporting from 'highcharts/modules/exporting';
   styleUrls: ['./pie.component.scss'],
 })
 export class PieComponent implements OnInit {
-  Highcharts = Highcharts;
-  chartOptions = {};
+  Highcharts = Highcharts
+  chartOptions = {}
 
-  @Input() data = [];
+  @Input() data = []
 
   constructor() {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.chartOptions = {
       chart: {
         plotBackgroundColor: null,
@@ -52,12 +52,12 @@ export class PieComponent implements OnInit {
           data: this.data,
         },
       ],
-    };
+    }
 
-    HC_exporting(Highcharts);
+    HC_exporting(Highcharts)
 
     setTimeout(() => {
-      window.dispatchEvent(new Event('resize'));
-    }, 300);
+      window.dispatchEvent(new Event('resize'))
+    }, 300)
   }
 }

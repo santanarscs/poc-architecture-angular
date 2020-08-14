@@ -1,29 +1,35 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { MatListModule } from '@angular/material/list';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatIconModule } from '@angular/material/icon';
-
-import { SidebarComponent } from './sidebar.component';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MatListModule } from '@angular/material/list'
+import { MatDividerModule } from '@angular/material/divider'
+import { MatIconModule } from '@angular/material/icon'
+import { MatExpansionModule } from '@angular/material/expansion'
+import { SidebarComponent } from './sidebar.component'
 
 describe('SidebarComponent', () => {
-  let component: SidebarComponent;
-  let fixture: ComponentFixture<SidebarComponent>;
+  let component: SidebarComponent
+  let fixture: ComponentFixture<SidebarComponent>
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [MatListModule, MatDividerModule, MatIconModule],
+      imports: [
+        BrowserAnimationsModule,
+        MatListModule,
+        MatDividerModule,
+        MatIconModule,
+        MatExpansionModule,
+      ],
       declarations: [SidebarComponent],
-    }).compileComponents();
-  }));
+    }).compileComponents()
+  }))
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SidebarComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(SidebarComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})

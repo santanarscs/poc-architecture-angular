@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
-import { DashboardService } from './services/dashboard.service';
+import { Component, OnInit, ViewChild } from '@angular/core'
+import { MatTableDataSource } from '@angular/material/table'
+import { DashboardService } from './services/dashboard.service'
 const ELEMENT_DATA: PeriodicElement[] = [
   { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
   { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -22,12 +22,12 @@ const ELEMENT_DATA: PeriodicElement[] = [
   { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
   { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
   { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
-];
+]
 export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+  name: string
+  position: number
+  weight: number
+  symbol: string
 }
 @Component({
   selector: 'app-dashboard',
@@ -35,17 +35,17 @@ export interface PeriodicElement {
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
-  bigChart = [];
-  cards = [];
-  pieChart = [];
+  bigChart = []
+  cards = []
+  pieChart = []
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol']
+  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA)
   constructor(private dashboardService: DashboardService) {}
 
-  ngOnInit() {
-    this.bigChart = this.dashboardService.bigChart();
-    this.cards = this.dashboardService.cards();
-    this.pieChart = this.dashboardService.pieChart();
+  ngOnInit(): void {
+    this.bigChart = this.dashboardService.bigChart()
+    this.cards = this.dashboardService.cards()
+    this.pieChart = this.dashboardService.pieChart()
   }
 }
