@@ -7,9 +7,10 @@ import { HttpClientModule } from '@angular/common/http'
 import { AreaComponent } from './widgets/area/area.component'
 import { CardComponent } from './widgets/card/card.component'
 import { PieComponent } from './widgets/pie/pie.component'
+import { ActionComponent } from './components/action/action.component'
+
 import { HighchartsChartModule } from 'highcharts-angular'
 import { MatIconModule } from '@angular/material/icon'
-import { ActionComponent } from './containers/action/action.component'
 @NgModule({
   declarations: [AreaComponent, CardComponent, PieComponent, ActionComponent],
   imports: [
