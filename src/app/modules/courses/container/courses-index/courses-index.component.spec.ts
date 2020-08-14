@@ -2,6 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 import { HttpClientModule } from '@angular/common/http'
 import { MatCardModule } from '@angular/material/card'
 import { MatIconModule } from '@angular/material/icon'
+import { MatPaginatorModule } from '@angular/material/paginator'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { CoursesIndexComponent } from './courses-index.component'
 import { Component, Input } from '@angular/core'
 import { Course } from '../../entities/Course'
@@ -10,7 +12,7 @@ import { Course } from '../../entities/Course'
   selector: 'app-action',
   template: '<p>Mock App Action </p>',
 })
-class MockAppActionComponent {}
+class MockAppAction {}
 
 @Component({
   selector: 'app-courses-list',
@@ -27,10 +29,16 @@ describe('CoursesIndexComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule, MatCardModule, MatIconModule],
+      imports: [
+        HttpClientModule,
+        MatCardModule,
+        MatIconModule,
+        BrowserAnimationsModule,
+        MatPaginatorModule,
+      ],
       declarations: [
         CoursesIndexComponent,
-        MockAppActionComponent,
+        MockAppAction,
         MockAppCoursesListComponent,
       ],
       providers: [],
