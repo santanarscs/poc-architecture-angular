@@ -1,14 +1,7 @@
-const { pathsToModuleNameMapper } = require('ts-jest/utils');
-const { compilerOptions } = require('./tsconfig');
+const { pathsToModuleNameMapper } = require('ts-jest/utils')
+const { compilerOptions } = require('./tsconfig')
 
 module.exports = {
-  // globals: {
-  //   'ts-jest': {
-  //     astTransformers: {
-  //       before: [''],
-  //     },
-  //   },
-  // },
   preset: 'jest-preset-angular',
   roots: ['<rootDir>/src/'],
   testMatch: ['**/+(*.)+(spec).+(ts)'],
@@ -19,4 +12,4 @@ module.exports = {
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths || {}, {
     prefix: '<rootDir>/',
   }),
-};
+}
