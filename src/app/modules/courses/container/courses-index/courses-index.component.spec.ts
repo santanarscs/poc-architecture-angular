@@ -12,7 +12,7 @@ import { Course } from '../../entities/Course'
   selector: 'app-action',
   template: '<p>Mock App Action </p>',
 })
-class MockAppAction {}
+class MockAppActionComponent {}
 
 @Component({
   selector: 'app-courses-list',
@@ -38,7 +38,7 @@ describe('CoursesIndexComponent', () => {
       ],
       declarations: [
         CoursesIndexComponent,
-        MockAppAction,
+        MockAppActionComponent,
         MockAppCoursesListComponent,
       ],
       providers: [],
@@ -52,6 +52,7 @@ describe('CoursesIndexComponent', () => {
   })
 
   it('should create', () => {
+    const test = 0
     expect(component).toBeTruthy()
   })
 })
