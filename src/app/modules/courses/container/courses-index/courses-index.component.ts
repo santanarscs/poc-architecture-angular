@@ -9,11 +9,11 @@ import { Course } from '../../entities/Course'
 })
 export class CoursesIndexComponent implements OnInit {
   courses$: Observable<Course[]>
-  displayedColumns = ['seqNo', 'name', 'description']
+  displayedColumns = ['id', 'name', 'description']
 
   constructor(private service: CoursesService) {}
 
   ngOnInit(): void {
-    this.courses$ = this.service.findAll()
+    this.courses$ = this.service.findAll({ page: 1, limit: 10 })
   }
 }

@@ -1,7 +1,19 @@
-<app-action></app-action>
+<app-action>
+  <ul>
+    <li>
+      <button type="button">
+        <mat-icon aria-hidden="false" aria-label="Example home icon"
+          >add</mat-icon
+        >
+        Novo
+      </button>
+    </li>
+  </ul>
+</app-action>
 
-<ul>
-  <li *ngFor="let item of courses$ | async">
-    <p>{{ item.id }}</p>
-  </li>
-</ul>
+<mat-card *ngIf="courses$ | async" style="margin: 20px;">
+  <app-courses-list
+    [courses]="courses$ | async"
+    [displayedColumns]="displayedColumns"
+  ></app-courses-list>
+</mat-card>

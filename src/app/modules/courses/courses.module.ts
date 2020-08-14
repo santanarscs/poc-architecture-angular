@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 
-import { MatTableModule } from '@angular/material/table'
-import { MatInputModule } from '@angular/material/input'
-import { MatPaginatorModule } from '@angular/material/paginator'
+import { CdkTableModule } from '@angular/cdk/table'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MatSortModule } from '@angular/material/sort'
+import { MatIconModule } from '@angular/material/icon'
 
 import { CoursesRoutingModule } from './courses-routing.module'
 import { CoursesIndexComponent } from './container/courses-index/courses-index.component'
@@ -17,11 +16,10 @@ import { SharedModule } from 'src/app/shared/shared.module'
   imports: [
     CommonModule,
     CoursesRoutingModule,
-    MatTableModule,
-    MatInputModule,
-    MatPaginatorModule,
+    CdkTableModule,
     MatProgressSpinnerModule,
     MatSortModule,
+    MatIconModule,
     SharedModule,
   ],
 })

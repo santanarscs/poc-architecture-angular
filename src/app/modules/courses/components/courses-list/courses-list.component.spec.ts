@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing'
+import { CdkTableModule } from '@angular/cdk/table'
 
 import { CoursesListComponent } from './courses-list.component'
 
@@ -8,6 +9,7 @@ describe('CoursesListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [CdkTableModule],
       declarations: [CoursesListComponent],
     }).compileComponents()
   }))
