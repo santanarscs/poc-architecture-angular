@@ -11,9 +11,24 @@
   </ul>
 </app-action>
 
-<mat-card *ngIf="courses$ | async" style="margin: 20px;">
+<mat-card
+  class="mat-elevation-z2"
+  *ngIf="courses$ | async"
+  style="margin: 20px;"
+>
   <app-courses-list
     [courses]="courses$ | async"
     [displayedColumns]="displayedColumns"
   ></app-courses-list>
 </mat-card>
+
+<mat-paginator
+  class="mat-elevation-z2"
+  style="margin: 20px;"
+  [pageIndex]="page"
+  [length]="200"
+  [pageSize]="limit"
+  [pageSizeOptions]="paginateOptions"
+  (page)="handlePageChange($event)"
+>
+</mat-paginator>
