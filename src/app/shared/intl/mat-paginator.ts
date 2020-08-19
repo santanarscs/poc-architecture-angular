@@ -20,7 +20,7 @@ const rangeLabel = (page: number, pageSize: number, length: number) => {
 export function getTranslatePaginatorIntl(): MatPaginatorIntl {
   const paginator = new MatPaginatorIntl()
 
-  paginator.itemsPerPageLabel = 'Itens por página'
+  paginator.itemsPerPageLabel = 'Itens por pagina'
   paginator.nextPageLabel = 'Próxima página'
   paginator.previousPageLabel = 'Voltar página'
   paginator.getRangeLabel = rangeLabel
