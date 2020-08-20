@@ -1,6 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core'
 import { MatTableDataSource } from '@angular/material/table'
 import { DashboardService } from './services/dashboard.service'
+import { Observable } from 'rxjs'
+import { QuestionBase } from 'src/app/shared/models/question-base'
+import { QuestionService } from './services/question.service'
 const ELEMENT_DATA: PeriodicElement[] = [
   { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
   { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -38,14 +41,20 @@ export class DashboardComponent implements OnInit {
   bigChart = []
   cards = []
   pieChart = []
+  questions$: Observable<QuestionBase<any>[]>
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol']
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA)
-  constructor(private dashboardService: DashboardService) {}
+  constructor(
+    private dashboardService: DashboardService,
+    private service: QuestionService
+  ) {}
 
   ngOnInit(): void {
     this.bigChart = this.dashboardService.bigChart()
     this.cards = this.dashboardService.cards()
     this.pieChart = this.dashboardService.pieChart()
+
+    this.questions$ = this.service.getQuestions()
   }
 }

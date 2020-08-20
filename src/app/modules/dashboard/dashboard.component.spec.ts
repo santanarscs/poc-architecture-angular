@@ -7,6 +7,7 @@ import { MatDividerModule } from '@angular/material/divider'
 import { DashboardComponent } from './dashboard.component'
 import { Component, Input } from '@angular/core'
 import { DashboardService } from './services/dashboard.service'
+import { QuestionBase } from 'src/app/shared/models/question-base'
 
 @Component({
   selector: 'app-widget-pie',
@@ -32,6 +33,14 @@ class MockWidgetCardComponent {
   @Input() data: any[]
 }
 
+@Component({
+  selector: 'app-dynamic-form',
+  template: '<p>Mock App Widget Card </p>',
+})
+class MockDynamicFormComponent {
+  @Input() questions: QuestionBase<any>[]
+}
+
 describe('DashboardComponent', () => {
   let component: DashboardComponent
   let fixture: ComponentFixture<DashboardComponent>
@@ -44,6 +53,7 @@ describe('DashboardComponent', () => {
         MockWidgetAreaComponent,
         MockWidgetCardComponent,
         MockWidgetPieComponent,
+        MockDynamicFormComponent,
       ],
       providers: [DashboardService],
     }).compileComponents()

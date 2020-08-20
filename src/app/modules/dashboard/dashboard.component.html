@@ -1,5 +1,11 @@
 <div style="padding: 20px;">
   <div>
+    <app-dynamic-form [questions]="questions$ | async"></app-dynamic-form>
+  </div>
+  <br />
+  <mat-divider></mat-divider>
+  <br />
+  <div>
     <app-widget-area [data]="bigChart"></app-widget-area>
   </div>
 
@@ -61,3 +67,5 @@
     </div>
   </div>
 </div>
+
+<br />
